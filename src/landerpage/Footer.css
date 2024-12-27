@@ -1,0 +1,17 @@
+
+.footer{
+    background-color: black;
+    padding: 2rem;
+}
+.footer-info{
+    margin-left: 5rem;
+}
+.footer-social-signup{
+    margin-left: 0rem;
+}
+
+.socials-icon a{
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 2rem;
+}

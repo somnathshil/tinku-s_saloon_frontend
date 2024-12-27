@@ -1,0 +1,29 @@
+
+.main{
+    height: 15vh;
+    background-color: rgb(29, 28, 28);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+    margin-left: 6rem;
+}
+.nav-icon a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+.nav-list a{
+    margin-left: 1.3rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
