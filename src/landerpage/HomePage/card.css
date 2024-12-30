@@ -1,0 +1,15 @@
+  
+
+  .card-indivisual{
+    width: 100%;
+    display: flext;
+    flex-direction: column;
+    opacity: .9;
+  }
+  .card-img{
+    height: 35vh;
+  }
+
+  .card-indivisual:hover{
+    opacity: 1;
+  }

@@ -1,10 +1,15 @@
 import "./Navbar.css";
-import React, { useEffect } from "react";
+import React, { useContext} from "react";
 import { Link } from "react-router-dom";
+import GeneralContext from "./GeneralContext";
 // import { useState, useEffect } from "react";
 // import { useNavigate} from 'react-router-dom';
 
-function Navbar({ isLoggedIn, user }) {
+function Navbar() {
+  const {openUserWindow} = useContext(GeneralContext);
+  const handleOpenWindowButton = ()=>{
+  openUserWindow();
+}
   return (
     <>
       <div className="row main">
@@ -13,30 +18,19 @@ function Navbar({ isLoggedIn, user }) {
             <img
               src="../images/Saloon-Logo.jpg"
               alt="image"
-              style={{ width: "6rem", height: "6rem", borderRadius: "100%" }}
+              // style={{ width: "6rem", height: "6rem", borderRadius: "100%" }}
             />
           </Link>
         </div>
         <div className="col nav-list">
-          <Link to="/">Home</Link>
-          {isLoggedIn ? (
-            <Link to="/logout">Logout</Link>
-          ) : (
-            <>
-              <Link to="/signup">SignUp</Link>
-              <Link to="/login">Login</Link>
-            </>
-          )}
-          <Link to="/booking">Booking</Link>
-          <Link to="/workdemo">WorkDemo</Link>
-          <Link to="/about">About</Link>
+          <Link to="/" className="Nav-menus">Home</Link>
+          
+          <Link to="/booking" className="Nav-menus">Booking</Link>
+          <Link to="/workdemo" className="Nav-menus">WorkDemo</Link>
+          <Link to="/about" className="Nav-menus">About</Link>
           &nbsp;&nbsp;&nbsp;{" "}
-          {user && (
-            <span style={{ color: "#F4A460", fontSize: "1.5rem" }}>
-              {user.username}
-              <i class="fa-solid fa-user"></i>
-            </span>
-          )}
+         
+          <button onClick={handleOpenWindowButton} className="menu-bar-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
       </div>
     </>

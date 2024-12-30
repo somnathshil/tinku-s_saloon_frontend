@@ -1,22 +1,23 @@
 import { useNavigate } from "react-router-dom";
+import "./BookingPage.css";
 
 function FuneralBooking({handleBookingClick}) {
   const navigate = useNavigate();
   return (
     <>
-      <div className="row " style={{ marginTop: "2rem", marginBottom: "5rem" }}>
-        <div className="col">
-          <img
-            src="../images/FuneralService.webp"
-            alt="image"
-            style={{ width: "80%", marginLeft: "8rem", height: "50vh" }}
-          />
+      <div className="row " style={{marginTop:"2rem", marginBottom:"5rem"}}>
+        <div className="col ">
+          <img src="../images/FuneralService.webp" alt="image" style={{
+      width: "80%",
+    marginLeft: "8rem",
+    height: "50vh"
+    }}/>
         </div>
         <div className="col ">
-          <h4 style={{ color: "white", width: "80%" }}>
+          <h4 style={{color: "white", width: "80%"}}>
             Sar Mundan Services for Hindu Rituals
           </h4>
-          <p style={{ color: "white", width: "80%" }}>
+          <p  style={{color: "white", width: "80%"}}>
             At Tinku's Saloon, we honor and respect the deep-rooted traditions
             of Hindu rituals, including Sar Mundan (head shaving) ceremonies
             performed during funerals and post-cremation rites. We provide
@@ -30,20 +31,18 @@ function FuneralBooking({handleBookingClick}) {
             supporting you and your family during this time of remembrance and
             reflection.
           </p>
-          <button
+          <button onClick={()=>navigate("/bookingform")} className="booking-btn"
             style={{
               border: "none",
-              backgroundColor: "blue",
-              borderRadius: "8PX",
-              height: "2.5rem",
-              width: "7rem",
-              color: "white",
-            }}
-
-            onClick={()=>navigate("/bookingform")}
-          >
+    backgroundColor: "blue",
+    borderRadius:" 8PX",
+    height: "2.5rem",
+    width: "7rem",
+    color: "white",
+    opacity: ".8",
+            }}>
             Book Now
-          </button>
+          </button >
         </div>
       </div>
     </>

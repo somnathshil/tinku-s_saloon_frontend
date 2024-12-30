@@ -1,13 +1,13 @@
+ import "./card.css";
 
 function Card({image, title, description}) {
     return ( 
         <>
-        <div className="card equal-height" style={{width: "100%", display: "flex", flexDirection: "column"}}>
+        <div className="card card-indivisual">
         <img
           src={image}
-          className="card-img-top"
+          className="card-img"
           alt="image"
-          style={{height:"35vh"}}
         />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>

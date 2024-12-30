@@ -12,6 +12,15 @@
     align-items: center;
     margin-left: 6rem;
 }
+.nav-icon  img{
+    width:6rem;
+    height:6rem;
+    border-radius: 100%;
+    opacity: .9;
+}
+.nav-icon  img:hover{
+   opacity: 1;
+}
 .nav-icon a{
     font-size: 2rem;
     text-decoration: none;
@@ -26,4 +35,22 @@
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
+}
+.menu-bar-btn{
+    background-color: rgb(29, 28, 28);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    opacity: .8;
+}
+
+.menu-bar-btn:hover{
+    opacity: 1;
+}
+
+.Nav-menus{
+    opacity: .8;
+}
+.Nav-menus:hover{
+    opacity: 1;
 }

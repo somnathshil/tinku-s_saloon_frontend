@@ -1,0 +1,42 @@
+
+.main-cont-user-window{
+          width: 25%;
+          height: 28rem;
+          position: fixed;
+          top: 6rem;
+          right: 0;
+          z-index: 1000;
+          background-color: #C19A6B;
+}
+
+.main-cont-user-window ul{
+    list-style: none;
+}
+
+.main-cont-user-window ul li{
+        font-size: 1.5rem;
+        font-family: revert-layer;
+        font-style: italic;
+        font-weight: 700;
+        /* margin-left: 1rem;
+        margin-top: 1rem; */
+        margin-right: 1.5rem;
+        padding: 1rem;
+        
+}
+
+.close-btn{
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+}
+.user-window-heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.li-hover:hover{
+    border: 2px solid white;
+    
+}

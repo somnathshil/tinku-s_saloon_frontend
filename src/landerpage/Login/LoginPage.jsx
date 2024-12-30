@@ -1,7 +1,9 @@
 import { useNavigate} from 'react-router-dom';
-import React, {useState} from 'react';
+import React, { useState, useContext} from 'react';
 import axios from 'axios';
-function LoginPage({setIsLoggedIn, setUser}) {
+import GeneralContext from '../GeneralContext';
+function LoginPage() {
+   const {handleLogin} = useContext(GeneralContext);
     const [formData, setFormData] = useState({
              username: "",
              password: "",
@@ -26,8 +28,7 @@ function LoginPage({setIsLoggedIn, setUser}) {
           );
           const {user} = await res.data;
           const storedUser =await localStorage.setItem('user', JSON.stringify(user));
-           setIsLoggedIn(true);
-           setUser(storedUser);
+          handleLogin();
           navigate("/");
           alert(res.data.message);
        }catch(error){
