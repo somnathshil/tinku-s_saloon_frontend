@@ -10,7 +10,7 @@ function BookingFormPage() {
     mobileNumber: "",
     address: "",
     eventName: "",
-    date: "",
+    serviceDate: "",
    });
 
   const  handleChange =  (e)=>{
@@ -142,9 +142,9 @@ function BookingFormPage() {
                 border: "none",
               }}
               placeholder="Set your booking date"
-              name="date"
+              name="serviceDate"
               id="date"
-              value={formData.date}
+              value={formData.serviceDate}
               onChange={handleChange}
               required
             />

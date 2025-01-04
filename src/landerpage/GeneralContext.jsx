@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import React from 'react';
 import UserWindow from "./UserWindow";
+import { useNavigate } from "react-router-dom";
 
 
 const GeneralContext = React.createContext({
@@ -14,6 +15,7 @@ const GeneralContext = React.createContext({
 
 export const GeneralContextProvider = (props)=>{
         const [isUserWindowOpen, setIsUserWindowOpen ] = useState(false);
+        const navigate = useNavigate();
 
         const [isLoggedIn, setIsLoggedIn] = useState(false);
         const [user, setUser] = useState(null);
@@ -38,6 +40,8 @@ export const GeneralContextProvider = (props)=>{
             localStorage.removeItem('user');
             setIsLoggedIn(false);
             setUser(null);
+            navigate("/");
+
           };
 
         const handleOpenUserWindow = ()=>{

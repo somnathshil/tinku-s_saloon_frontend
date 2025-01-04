@@ -40,7 +40,7 @@ function UserWindow() {
               </li>
             </>
           )}
-
+          <li className="li-hover"><Link to="/bookinglist" style={{ textDecoration: "none", }}>Your Orders</Link> </li>
           <li className="li-hover"><i className="fa-solid fa-gear"></i> Settings</li>
           <li className="li-hover"><i className="fa-regular fa-circle-question"></i> Help</li>
         </ul>

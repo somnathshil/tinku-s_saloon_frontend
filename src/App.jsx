@@ -11,6 +11,7 @@ import WorkDemoPage from './landerpage/WorkDemo/WorkDemoPage.jsx';
 import LoginPage from './landerpage/Login/LoginPage.jsx';
 import BookingFormPage from './landerpage/BookingForm/BookingFormPage.jsx';
 import { GeneralContextProvider } from './landerpage/GeneralContext.jsx';
+import BookingList from './landerpage/BookingList/BookingList.jsx';
 
 
   function App() {
@@ -28,6 +29,7 @@ import { GeneralContextProvider } from './landerpage/GeneralContext.jsx';
     <Route path='/workdemo' element={<WorkDemoPage/>} />
     <Route path='/login' element={<LoginPage  />}/>
     <Route path='/bookingform' element={< BookingFormPage />}/>
+    <Route path='/bookinglist' element={<BookingList/>}/>
     </Routes>
     <Footer/>
     </GeneralContextProvider>

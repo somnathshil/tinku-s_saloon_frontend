@@ -1,0 +1,44 @@
+.booking-lists-card{
+    width: 15rem;
+    border: 2px solid white;
+    margin: 3rem;
+    padding: 1rem;
+}
+.heading{
+    text-align: center;
+    color: rgb(13, 218, 64);
+}
+.nothing-booked{
+    color: rgb(212, 175, 9);
+    text-align: center ;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.booking-edit-btn{
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    background-color: aqua;
+    color: rgb(10, 73, 146);
+    opacity: .7;
+}
+.booking-edit-btn:hover{
+    opacity: 1;
+}
+
+.booking-cancel-btn{
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    background-color: rgb(216, 79, 45);
+    color: rgb(82, 13, 2);
+    opacity: .7;
+    margin-left: 1rem;
+}
+.booking-cancel-btn:hover{
+    opacity: 1;
+}
