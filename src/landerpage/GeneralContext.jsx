@@ -15,6 +15,7 @@ const GeneralContext = React.createContext({
 
 export const GeneralContextProvider = (props)=>{
         const [isUserWindowOpen, setIsUserWindowOpen ] = useState(false);
+        const [isBookingEditWindow, setIsBookingEditWindow] = useState(false);
         const navigate = useNavigate();
 
         const [isLoggedIn, setIsLoggedIn] = useState(false);
