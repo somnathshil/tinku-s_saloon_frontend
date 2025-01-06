@@ -2,11 +2,13 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import GeneralContext from "../GeneralContext";
 import "./BookingList.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function BookingList() {
     const [fetchUserData, setFetchUserData] = useState([]);
-    const {user} =  useContext(GeneralContext);
+    const {user, openBookingEditWindow, openBookingCancelWindow} =  useContext(GeneralContext);
+
+  
      
 
     useEffect( ()=>{
@@ -28,12 +30,20 @@ function BookingList() {
               }
         };
     fetchData();
-    }, [user]);
+    }, [user, openBookingEditWindow, openBookingCancelWindow]);
 
 
     useEffect(() => {
       console.log(fetchUserData);  // Logs after data is fetched
   }, [fetchUserData]);
+
+  const handleEditButton = (item)=>{
+    openBookingEditWindow(item);
+  };
+    
+  const handleCancelButton = (items)=>{
+    openBookingCancelWindow(items);
+  };
 
     return ( 
     <>
@@ -53,8 +63,8 @@ function BookingList() {
                   <p>For {item.eventName}</p>
                   <p>Booking Date: {item.serviceDate}</p>
                    <p>Booked At: {new Date(item.createdAt).toISOString().split('T')[0]}</p>
-                   <Link to="/"> <button className="booking-edit-btn"> Edit </button></Link>
-                   <Link to="/"> <button className="booking-cancel-btn"> Cancel </button></Link>
+                    <button className="booking-edit-btn" onClick={()=> handleEditButton(item)}> Edit </button>
+                   <button className="booking-cancel-btn" onClick={()=>handleCancelButton(item)}> Cancel </button>
                   </div>
               ))
               )}

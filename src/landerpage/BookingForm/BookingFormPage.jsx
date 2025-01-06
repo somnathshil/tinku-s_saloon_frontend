@@ -1,9 +1,11 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import GeneralContext from "../GeneralContext";
 
 
 function BookingFormPage() {
+  const {user, isLoggedIn} = useContext(GeneralContext);
   const navigate = useNavigate();
    const [formData, setFormData] = useState({
     name: "",
@@ -12,6 +14,7 @@ function BookingFormPage() {
     eventName: "",
     serviceDate: "",
    });
+   
 
   const  handleChange =  (e)=>{
       setFormData({...formData, [e.target.name]: e.target.value});

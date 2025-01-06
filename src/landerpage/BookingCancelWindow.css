@@ -1,0 +1,45 @@
+.booking-cancel-main-div{
+  width:30rem;
+  height: 20rem;
+  position: fixed;
+  top: 0;
+  background-color: rgb(245, 112, 168);
+  margin-top: 10rem;
+  margin-left: 25rem;
+  padding: 2rem;
+  color: rgb(252, 9, 9);
+}
+
+.cancel-yes-btn{
+width: 8rem;
+height: 3rem;
+margin-top: 3rem;
+margin-left:3rem;
+border: none;
+font-size: 1.5rem;
+font-weight: 700;
+background-color: red;
+color: white;
+}
+.cancel-yes-btn:hover{
+  border: 2px solid white;
+}
+.cancel-no-btn{
+  width: 8rem;
+  height: 3rem;
+  margin-top: 3rem;
+  margin-left:3rem;
+  border: none;
+  font-size: 1.5rem;
+font-weight: 700;
+background-color: green;
+color: white;
+}
+.cancel-no-btn:hover{
+  border: 2px solid white;
+}
+.cross-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
